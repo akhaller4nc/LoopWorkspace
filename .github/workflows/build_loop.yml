@@ -283,6 +283,13 @@ jobs:
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
+          
+          # Module: File: code customization for Glucose Guardrails (LB to 70)
+          curl https://github.com/akhaller4nc/LoopKit/commit/4df1a1d5cc1373b2ba3d09f5407d4c3ebb973607.patch | git apply -v --directory=LoopKit
+
+          # Module: File: code customization for autobolus percentage from 40% to 45%
+          curl https://github.com/akhaller4nc/Loop/commit/6e8304fef113d40899e0af238e62ed287d9e6ae9.patch | git apply -v --directory=Loop
+          
           # The lines below add the customizations listed using the CustomizationSelect script
           # The "\" is a continuation character 
           #   the line following a "\" should not be blank
